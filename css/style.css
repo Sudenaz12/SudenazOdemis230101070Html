@@ -1,18 +1,108 @@
-main {
-    background: linear-gradient(135deg, #ff7e5f, #feb47b);
-    color: #fff;
-    font-family: 'Arial', sans-serif;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 50%;
+body{
+     background-color: bisque;
+     margin:0px;
+     padding:0 px;
+}
+.kapsa{
+    width:900px;
+    margin:20px auto;
+    border: 2px solid black;
+}
+ .header {
+    padding:30px;
+ }
+ .header h2{
+    width:400px;
+     border-radius :5px ;
+     border: 2px solid orange;
+     padding-left: 25px;
+     background-color: coral;
+     color:white;
+
+ }
+ .üst_menü{
+    background-color: rgb(151, 148, 148);
+    height: 40px;
+        
+ }
+ .üst_menü ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+ }
+ .üst_menü ul li{
+    float:left;   
+ }
+ /* a inline element ,satır ve yükseklik olması için block içine sok*/
+ .üst_menü ul li a{
+    display:block;
+    height: 40px;
+    width: 150px;
     text-align: center;
-    justify-self: center;
-}
- 
-main:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(135deg, #feb47b, #ff7e5f, );
-}
+    line-height: 40px;
+    color:black;
+    font-size:18px ;
+    text-decoration: none;
+ }
+ .üst_menü ul li a:hover {
+   color:rgb(255, 10, 10);
+   text-decoration: underline;  
+ }
+ .içerik{
+    background-color: white;
+    height: 500px;
+ }
+ .ara{
+    height: 40px;
+    line-height: 40px;
+    float: right;
+    margin-right: 10px;
+ }
+ .ara button{
+    width: 60px;
+    background-color: rgb(46, 112, 46);
+    color: white;
+    border-radius: 10px;
+ }
+ .solTaraf{
+    width: 600px;
+    line-height: 30px;
+    text-align: justify;
+    float:left;
+
+ }
+ .solTaraf h2{
+    width: 600px;
+    border-bottom:2px dashed black;
+    padding-left: 20px;  
+ }
+ .solTaraf img{
+    height:300px;
+    width:300px;
+    float:left;
+ }
+ .sağTaraf{
+    width: 270px;
+    margin-left: 30px;
+    float:left;
+ }
+ .sağTaraf h3{
+    height: 50px;
+    background-color: darkgray;
+    line-height: 50px;
+    text-align: center;
+    border-top: 10px;
+ }
+ .sağTaraf ul{
+    margin:0px;
+    padding:0px;
+    list-style-type: none;
+ }
+ .sağTaraf ul li{
+    height: 40px;
+    line-height: 40px;
+    background-color: rgb(244, 228, 210);
+    padding-left: 10px;
+    padding-top: 10px;
+    border-bottom: 1px solid black;
+ }
