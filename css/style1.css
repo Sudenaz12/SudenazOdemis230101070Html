@@ -1,0 +1,55 @@
+ body {
+    padding: 0;
+    margin: 0; /* Body'nin varsayılan dış boşluklarını da sıfırla */
+    font-family: Arial, sans-serif; /* Daha okunaklı bir font ekleyelim */
+}
+.navigation {
+    list-style: none; /* Liste işaretlerini kaldır */
+    background-color: rgb(235, 181, 44); /* Sarımsı arka plan rengi */
+    display: flex; /* Flexbox'ı etkinleştir */
+    justify-content: flex-end; /* Öğeleri sağa yasla */
+    flex-wrap: wrap; /* Öğeler sığmadığında alt satıra geçmelerini sağla */
+    padding: 0; /* Ul elementinin varsayılan padding'ini kaldır */
+    margin: 0; /* Ul elementinin varsayılan margin'ini kaldır */
+}
+.navigation a {
+    text-decoration: none; /* Bağlantı alt çizgilerini kaldır */
+    display: block; /* Bağlantının tüm alanı kaplamasını sağla (padding için gerekli) */
+    padding: 16px; /* Bağlantı iç boşluğu */
+    color: white; /* Bağlantı metin rengi */
+    white-space: nowrap; /* Menü öğelerinin kelimelerini ayırma */
+    transition: background-color 0.3s ease; /* Hover efektine yumuşak geçiş ekle */
+}
+.navigation a:hover {  
+    background-color: gold;
+} 
+/* Responsive Tasarım - 800px Genişliğe Kadar */
+@media all and (max-width: 800px) {
+    .navigation {
+        /* 800px altında öğeleri eşit aralıklarla dağıt */
+        justify-content: space-around;
+    }
+}
+
+/* Responsive Tasarım - 600px Genişliğe Kadar (Mobil Görünüm) */
+@media all and (max-width: 600px) {
+    .navigation {
+        flex-direction: column; /* Öğeleri dikeyde sırala (alt alta) */
+        align-items: stretch; /* Öğelerin yatayda tam genişliği kaplamasını sağla */
+        /* Bu durumda justify-content: space-around etkisiz kalır, çünkü tek bir eksen var. */
+    }
+
+    .navigation a {
+        text-align: center;  
+        padding: 10px;  
+        border-top: 1px solid rgba(255, 255, 255, 0.3); /* Üst kenarlık */
+        /* border-bottom: 1px solid rgba(0, 0, 0, 0.1); -- Her öğeye alt kenarlık vermeye gerek yok, sadece üst yeterli olabilir */
+    }
+
+    .navigation li:last-child a {
+        border-bottom: none; /* Son öğenin alt kenarlığını kaldır */
+    }
+    .navigation li:not(:last-child) a {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);  
+    }
+}
